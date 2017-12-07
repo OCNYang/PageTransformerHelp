@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VariationViewPager.iml" filepath="$PROJECT_DIR$/VariationViewPager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pagetransformerhelp/pagetransformerhelp.iml" filepath="$PROJECT_DIR$/pagetransformerhelp/pagetransformerhelp.iml" />
+    </modules>
+  </component>
+</project>
