@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.ocnyang.pagetransformerhelp.cardtransformer.AlphaPageTransformer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class CardViewPagerActivity extends AppCompatActivity {
         mViewPager = ((ViewPager) findViewById(R.id.cardViewPager));
         mViewPager.setPageMargin(20);
         mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setPageTransformer(true,new AlphaPageTransformer());
         mViewPager.setAdapter(new MyPagerAdapter(getViewPagerData(),this));
     }
 
