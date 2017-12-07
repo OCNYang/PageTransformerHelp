@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:clipChildren="false"
     tools:context="com.ocnyang.variationviewpager.CardViewPagerActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/cardViewPager"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="60dp"
         android:clipChildren="false"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"/>
+        android:overScrollMode="never"/>
 
 </FrameLayout>
