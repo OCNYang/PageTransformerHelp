@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,14 +9,10 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/cardViewPager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:clipChildren="false"
         android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        app:layout_constraintDimensionRatio="19:9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginRight="60dp"/>
 
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>
