@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     android:clipChildren="false"
+    android:orientation="vertical"
     tools:context="com.ocnyang.variationviewpager.CardViewPagerActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="每种效果，请退出此页面重新进入再切换浏览另一种效果。（不同效果之间有冲突）"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/cardViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -19,4 +26,10 @@
         android:clipChildren="false"
         android:overScrollMode="never"/>
 
-</FrameLayout>
+    <TextView
+        android:gravity="center_horizontal"
+        android:text="https://github.com/OCNYang/PageTransformerHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

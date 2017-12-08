@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/AlphaPageTransformer"
+        android:icon="@mipmap/ic_launcher"
+        android:title="AlphaPageTransformer"/>
+    <item
+        android:id="@+id/CascadingPageTransformer"
+        android:title="CascadingPageTransformer"/>
+    <item
+        android:id="@+id/RotateDownPageTransformer"
+        android:title="RotateDownPageTransformer"/>
+
+</menu>
