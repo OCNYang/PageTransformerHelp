@@ -9,26 +9,28 @@
 
     <TextView
         android:id="@+id/defaultStyle"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="@dimen/btn_padding"
         android:paddingTop="@dimen/btn_padding"
-        android:text="Default PageTransformer"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="Banner PageTransformer"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/cardStyle"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/defaultStyle"
         android:paddingBottom="@dimen/btn_padding"
         android:paddingTop="@dimen/btn_padding"
         android:text="Card PageTransformer"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/defaultStyle"/>
 
 </android.support.constraint.ConstraintLayout>

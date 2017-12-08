@@ -41,7 +41,6 @@ public class ViewPagerActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private final int[] mData = {R.drawable.img0, R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4};
-    private final String[] mStrings = {"R.drawable.img0", "R.drawable.img1", "R.drawable.img2", "R.drawable.img3", "R.drawable.img4"};
     private BannerViewPager mBannerViewPager;
 
     @Override
@@ -171,7 +170,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         List<BannerItemBean> pagerItemBeanList = new ArrayList<>(mData.length);
 
         for (int i = 0; i < mData.length; i++) {
-            pagerItemBeanList.add(new BannerItemBean(mData[i], mStrings[i]));
+            pagerItemBeanList.add(new BannerItemBean(mData[i], "欧神是世界上最帅的男人 +"+(i+1)));
         }
         return pagerItemBeanList;
     }

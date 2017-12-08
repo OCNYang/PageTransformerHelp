@@ -16,9 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPagerActivity">
+        <activity android:name=".ViewPagerActivity"
+            android:label="Banner Style">
         </activity>
-        <activity android:name=".CardViewPagerActivity">
+        <activity android:name=".CardViewPagerActivity"
+            android:label="Card ViewPager">
         </activity>
     </application>
 
