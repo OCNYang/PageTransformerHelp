@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">VariationViewPager</string>
-    <string name="testtext">www.ocnyang.com</string>
+    <string name="test_text">www.ocnyang.com</string>
 </resources>

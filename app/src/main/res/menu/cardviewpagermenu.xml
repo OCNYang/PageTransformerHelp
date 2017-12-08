@@ -10,5 +10,8 @@
     <item
         android:id="@+id/RotateDownPageTransformer"
         android:title="RotateDownPageTransformer"/>
+    <item
+        android:id="@+id/AlphaAndScalePageTransformer"
+        android:title="AlphaAndScalePageTransformer"/>
 
 </menu>

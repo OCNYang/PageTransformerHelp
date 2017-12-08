@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ocnyang.pagetransformerhelp.cardtransformer.AlphaAndScalePageTransformer;
 import com.ocnyang.pagetransformerhelp.cardtransformer.AlphaPageTransformer;
 import com.ocnyang.pagetransformerhelp.cardtransformer.CascadingPageTransformer;
 import com.ocnyang.pagetransformerhelp.cardtransformer.RotateDownPageTransformer;
@@ -62,6 +63,11 @@ public class CardViewPagerActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("RotateDownPageTransformer");
                 mViewPager.setPageMargin(40);
                 mViewPager.setPageTransformer(true,new RotateDownPageTransformer());
+                break;
+            case R.id.AlphaAndScalePageTransformer:
+                getSupportActionBar().setTitle("AlphaAndScalePageTransformer");
+                mViewPager.setPageMargin(40);
+                mViewPager.setPageTransformer(true,new AlphaAndScalePageTransformer());
                 break;
             default:
                 break;
