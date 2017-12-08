@@ -27,6 +27,10 @@ import java.util.List;
  *    * * * *   * * * *   *     *.Yang  Web site:www.ocnyang.com
  *******************************************************************/
 
+/**
+ * BannerViewPager
+ * This is just one example.When you use it, customize it to your own needs.
+ */
 
 public class BannerViewPager extends FrameLayout {
 

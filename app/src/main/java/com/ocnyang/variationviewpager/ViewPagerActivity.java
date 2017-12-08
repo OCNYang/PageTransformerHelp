@@ -65,7 +65,7 @@ public class ViewPagerActivity extends AppCompatActivity {
                         Glide.with(context).load(imgPath).into(imageView);
                     }
                 }).setPageTransformer(null)//设置切换效果
-                .setAutoPlay(true)//设置是否自动播放
+                .setAutoPlay(false)//设置是否自动播放
                 .setOnBannerItemClickListener(new BannerViewPager.OnBannerItemClickListener() {//设置item的监听事件
                     @Override
                     public void OnClickLister(View view, int currentItem) {

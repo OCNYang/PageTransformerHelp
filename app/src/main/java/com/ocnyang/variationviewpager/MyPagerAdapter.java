@@ -36,8 +36,6 @@ public class MyPagerAdapter extends PagerAdapter {
         ImageView imageView1 = (ImageView) inflate.findViewById(R.id.img_card_item);
         TextView textView = (TextView) inflate.findViewById(R.id.title_card_item);
 
-//        ImageView imageView = new ImageView(mContext);
-//        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(mContext).load(mData.get(position).getImg_url()).into(imageView1);
         textView.setText(mData.get(position).getTilte_text()+"");
         container.addView(inflate);
