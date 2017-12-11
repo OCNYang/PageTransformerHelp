@@ -8,6 +8,5 @@ This is a PageTransformer library for Android ViewPager;There are many custom Pa
 
 | Style Name | Demo Pic |
 | ------------- |:-------------:|
-| AccordionTransformer | ![AccordionTransformer](https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/AccordionTransformer.gif) |
-| ddd | <img src="https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/AccordionTransformer.gif" width = "300" alt="图片名称" align=center /> |
-
+| AccordionTransformer | <img src="https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/AccordionTransformer.gif" width = "600"align=center /> |
+| ddd | <img src="https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/AccordionTransformer.gif" width = "600"align=center /> |
