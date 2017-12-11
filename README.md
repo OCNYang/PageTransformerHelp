@@ -159,3 +159,8 @@ If you have some other nice PageTransformer, you can [create a pull request](htt
 同时如果你喜欢这个项目，欢迎 Star。  
 
 关于这篇文章更详细的教程，请看：**[ViewPager 超详解：玩出十八般花样](http://www.jianshu.com/p/f8bf9e8b0a39)**  
+
+## Thanks  
+
+* [banner](https://github.com/youth5201314/banner)  
+* [MagicViewPager](https://github.com/hongyangAndroid/MagicViewPager)  
