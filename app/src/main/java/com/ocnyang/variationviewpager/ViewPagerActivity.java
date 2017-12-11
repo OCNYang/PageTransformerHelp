@@ -42,6 +42,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private final int[] mData = {R.drawable.img0, R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4};
     private BannerViewPager mBannerViewPager;
+    private ViewPager mViewPager1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +54,15 @@ public class ViewPagerActivity extends AppCompatActivity {
         /**
          * Pagetransformerhelp 库是一个封装的纯切换效果的库
          * 库中封装的 ViewPager 控件，只是为大家提供了一种自定义 ViewPager 的例子，不建议使用，建议大家还是根据想要的显示效果自己自定义。
-         * 当然如果你比较懒，也可以直接使用。
+         * 当然如果你比较懒，也可以直接使或者直接使用原生的。
          */
 
-        mBannerViewPager = ((BannerViewPager) findViewById(R.id.viewPager2));
+//        原生的ViewPager使用PageTransformerHelp库可以直接使用；
+//        mViewPager1 = ((ViewPager) findViewById(R.id.viewPager1));
+//        mViewPager1.setPageTransformer(true,new ParallaxTransformer());
+//        mViewPager1.setAdapter(new PagerAdapter(){});
 
+        mBannerViewPager = ((BannerViewPager) findViewById(R.id.viewPager2));
         mBannerViewPager.setData(getViewPagerDatas(),//设置数据
                 new ImageLoaderInterface() {//设置图片加载器
                     @Override
