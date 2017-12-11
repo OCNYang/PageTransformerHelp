@@ -2,7 +2,7 @@
 
 This is a PageTransformer library for Android ViewPager;There are many custom PageTransformer styles.Be able to help you when you use ViewPager.  
 
-**[关于 ViewPager 的各种用法详解教程]()**  
+**[关于 ViewPager 的各种用法详解教程](http://www.jianshu.com/p/f8bf9e8b0a39)**  
 
 ## Styles  
 
@@ -38,3 +38,122 @@ This is a PageTransformer library for Android ViewPager;There are many custom Pa
 | CascadingPageTransformer | <img src="https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/card/CascadingPageTransformer.gif" width = "400" alt="CascadingPageTransformer" align=center /> |
 | RotateDownPageTransformer | <img src="https://raw.githubusercontent.com/OCNYang/PageTransformerHelp/master/img/card/RotateDownPageTransformer.gif" width = "400" alt="RotateDownPageTransformer" align=center /> |
 
+
+## Download  
+
+You can download a jar from GitHub's [releses page](https://github.com/OCNYang/PageTransformerHelp/releases).  
+
+Or use Gradle:  
+**Step 1.** Add it in your root build.gradle at the end of repositories  
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+**Step 2.** Add the dependency  
+
+	dependencies {
+        compile 'com.github.OCNYang:PageTransformerHelp:v1.0.0'
+	}
+
+Or Maven:  
+**Step 1.**  
+
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+**Step 2.**  
+
+	<dependency>
+	    <groupId>com.github.OCNYang</groupId>
+	    <artifactId>PageTransformerHelp</artifactId>
+	    <version>v1.0.0</version>
+	</dependency>
+
+
+## How do I use PageTransformerHelp?  
+
+### Use Banner Style  
+
+Add your ViewPager in XML;And then:  
+
+	...
+	mViewPager = ((ViewPager) findViewById(R.id.viewPager));
+	mViewPager.setPageTransformer(true,new ParallaxTransformer());
+	...
+
+If you want a ViewPager with Title and Indicator,We recommend that you customize a ViewPager.  
+Here is an BannerViewPager for your reference, but we do not recommend that you use it directly unless it meets your requirements.  
+PageTransformerHelp 内提供了一种带有标题和指示器的 BannerViewPager，这里只是供大家根据需求自定义 ViewPager 时作为参考（大家只需要复制里面的代码，修改一下标题和指示器的布局文件即可）。不建议直接使用，如果你愿意也可以直接使用。  
+
+**Use BannerViewPager**  
+
+Add BannerViewPager in your XML;And then:  
+
+	mBannerViewPager = ((BannerViewPager) findViewById(R.id.bannerViewPager));
+	mBannerViewPager
+		.setData(List<BannerItemBean>,//set data
+		    new ImageLoaderInterface() {
+		        @Override
+		        public void displayImage(Context context, Object imgPath, ImageView imageView) {
+					//Set your own image loading method according to your needs
+		            //Glide.with(context).load(imgPath).into(imageView);
+		        }
+	    })
+		.setPageTransformer(new ParallaxTransformer())
+	    .setAutoPlay(false)
+	    .setOnBannerItemClickListener(new BannerViewPager.OnBannerItemClickListener() {
+	        @Override
+	        public void OnClickLister(View view, int currentItem) {
+	            ...
+	        }
+	    })
+	    .setHaveTitle(true);//set the title show or hide
+
+### Use Card Style  
+
+Add ViewPager in XML:  
+
+	<LinearLayout
+	    ...
+	    android:clipChildren="false"
+		...>
+		...
+		<android.support.v4.view.ViewPager
+			...
+	        android:layout_marginLeft="80dp"
+	        android:layout_marginRight="80dp"
+		    android:clipChildren="false"
+		    .../>
+		...
+	</LinearLayout>
+
+You should set `android:clipChildren="false"` for your ViewPager and ViewPager's parent;And set `layout_marginLeft`、`layout_marginRight`for your ViewPager.  
+And then set `setPageMargin`、`setPageTransformer` in the code:  
+
+	...
+	mViewPager = ((ViewPager) findViewById(R.id.cardViewPager));
+	mViewPager.setOffscreenPageLimit(3);
+	mViewPager.setPageMargin(40);
+	mViewPager.setPageTransformer(true,new AlphaPageTransformer());
+	mViewPager.setAdapter(...
+	...
+
+
+## In the end  
+
+If you have some other nice PageTransformer, you can [create a pull request](https://github.com/OCNYang/PageTransformerHelp/pulls). If you find some bugs,tell me through [create an issue](https://github.com/OCNYang/PageTransformerHelp/issues).  
+
+**Like it please give me a star.**   
+
+如果你有更好的自定义 PageTransformer 可以提交给我；  
+同时如果你喜欢这个项目，欢迎 Star。  
+
+关于这篇文章更详细的教程，请看：**[ViewPager 超详解：玩出十八般花样](http://www.jianshu.com/p/f8bf9e8b0a39)**  
