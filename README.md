@@ -130,8 +130,8 @@ Add ViewPager in XML:
 		...
 		<android.support.v4.view.ViewPager
             ...
-	        android:layout_marginLeft="80dp"
-	        android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
             android:clipChildren="false"
             .../>
 		...
