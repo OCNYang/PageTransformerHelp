@@ -109,7 +109,7 @@ Add BannerViewPager in your XML;And then:
 		            //Glide.with(context).load(imgPath).into(imageView);
 		        }
 	    })
-		.setPageTransformer(new ParallaxTransformer())
+        .setPageTransformer(new ParallaxTransformer())
 	    .setAutoPlay(false)
 	    .setOnBannerItemClickListener(new BannerViewPager.OnBannerItemClickListener() {
 	        @Override
@@ -126,14 +126,14 @@ Add ViewPager in XML:
 	<LinearLayout
 	    ...
 	    android:clipChildren="false"
-		...>
+        ...>
 		...
 		<android.support.v4.view.ViewPager
-			...
+            ...
 	        android:layout_marginLeft="80dp"
 	        android:layout_marginRight="80dp"
-		    android:clipChildren="false"
-		    .../>
+            android:clipChildren="false"
+            .../>
 		...
 	</LinearLayout>
 
