@@ -105,8 +105,8 @@ Add BannerViewPager in your XML;And then:
 		    new ImageLoaderInterface() {
 		        @Override
 		        public void displayImage(Context context, Object imgPath, ImageView imageView) {
-					//Set your own image loading method according to your needs
-		            //Glide.with(context).load(imgPath).into(imageView);
+                    //Set your own image loading method according to your needs
+                    //Glide.with(context).load(imgPath).into(imageView);
 		        }
 	    })
         .setPageTransformer(new ParallaxTransformer())
