@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*******************************************************************
@@ -17,8 +16,11 @@ import java.util.List;
 
 
 public class BannerAdapter extends PagerAdapter {
+
     private BannerViewPager bannerViewPager;
     private int mItemCount = 1;
+    private List<BannerItemBean> mData;
+    private ImageView.ScaleType mScaleType;
 
     public List<BannerItemBean> getData() {
         return mData;
@@ -31,10 +33,6 @@ public class BannerAdapter extends PagerAdapter {
         }
     }
 
-    private List<BannerItemBean> mData;
-    private List<ImageView> mViews;
-    private ImageView.ScaleType mScaleType;
-
     private ImageView.ScaleType getScaleType() {
         return mScaleType == null ? ImageView.ScaleType.CENTER_CROP : mScaleType;
     }
@@ -44,7 +42,6 @@ public class BannerAdapter extends PagerAdapter {
     }
 
     public BannerAdapter(BannerViewPager bannerViewPager) {
-        mViews = new ArrayList<>();
         this.bannerViewPager = bannerViewPager;
     }
 
@@ -60,28 +57,21 @@ public class BannerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView(mViews.get(position % mItemCount));
+        container.removeView(((ImageView) object));
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        if (mViews.size() <= mItemCount) {
-            for (int i = 0; i < mItemCount; i++) {
-                ImageView imageView = new ImageView(container.getContext());
-                imageView.setScaleType(getScaleType());
-                bannerViewPager.displayImg(container.getContext(), imageView, mData.get(i).getImg_path());
-                mViews.add(imageView);
-            }
-        }
-
-        ImageView imageView = mViews.get(position % mItemCount);
-        container.addView(imageView);
+        ImageView imageView = new ImageView(container.getContext());
+        imageView.setScaleType(getScaleType());
+        bannerViewPager.displayImg(container.getContext(), imageView, mData.get(position % mItemCount).getImg_path());
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 bannerViewPager.OnBannerItemClick(view);
             }
         });
+        container.addView(imageView);
 
         return imageView;
     }

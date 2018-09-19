@@ -175,7 +175,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         List<BannerItemBean> pagerItemBeanList = new ArrayList<>(mData.length);
 
         for (int i = 0; i < mData.length; i++) {
-            pagerItemBeanList.add(new BannerItemBean(mData[i], "欧神是世界上最帅的男人 +"+(i+1)));
+            pagerItemBeanList.add(new BannerItemBean(mData[i], "欧神是世界上最帅的男人 +" + (i + 1)));
         }
         return pagerItemBeanList;
     }

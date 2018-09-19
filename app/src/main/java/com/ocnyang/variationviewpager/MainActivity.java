@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,CardViewPagerActivity.class));
                 break;
             default:
-
                 break;
         }
     }
